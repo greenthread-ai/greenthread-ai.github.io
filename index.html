@@ -51,9 +51,30 @@
                         scale across cloud and on-premises infrastructure.
                     </p>
                     <div class="hero-cta">
-                        <a href="/register" class="btn-primary btn-lg"
-                            >Join the Waitlist</a
-                        >
+                        <form id="waitlist-form" class="waitlist-form">
+                            <div class="form-group">
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email address"
+                                    required
+                                    class="email-input"
+                                />
+                                <button
+                                    type="submit"
+                                    class="btn-primary btn-lg submit-btn"
+                                >
+                                    <span class="btn-text"
+                                        >Join the Waitlist</span
+                                    >
+                                    <span class="btn-loading">
+                                        <span class="spinner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                            <p id="status" class="form-status"></p>
+                        </form>
                     </div>
                 </div>
             </div>
