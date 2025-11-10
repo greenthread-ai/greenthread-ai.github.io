@@ -10,7 +10,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.ATTIO_API_KEY}`,
+        Authorization: `Bearer e8d6a2a654c9c28378e709f0adf2328af2ca0310b14c4a4be2ff79472e8b51cd`,
       },
       body: JSON.stringify({
         object: "person",
