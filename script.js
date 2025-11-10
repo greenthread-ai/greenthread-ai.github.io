@@ -90,8 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (res.ok) {
         // Success
-        statusEl.textContent =
-          data.message || "Thanks for joining! We'll be in touch soon.";
+        statusEl.textContent = "Thanks for joining! We'll be in touch soon.";
         statusEl.classList.add("success");
         emailInput.value = "";
       } else {
