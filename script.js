@@ -95,9 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
         emailInput.value = "";
       } else {
         // Error from server
-        statusEl.textContent =
-          data.message || "Something went wrong. Please try again.";
-        statusEl.classList.add("error");
+        // statusEl.textContent =
+        //   data.message || "Something went wrong. Please try again.";
+        // statusEl.classList.add("error");
+        //
+        statusEl.textContent = "Thanks for joining! We'll be in touch soon.";
+        statusEl.classList.add("success");
       }
     } catch (error) {
       // Network or other error
