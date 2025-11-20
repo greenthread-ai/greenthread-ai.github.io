@@ -289,11 +289,57 @@ body {
     font-weight: 400;
 }
 
+.hero-title .gradient-text {
+    background: linear-gradient(
+        135deg,
+        var(--brand-primary) 0%,
+        var(--brand-primary-light) 50%,
+        var(--brand-primary) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
+}
+
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--gray-600);
     line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero-subtitle .highlight {
+    color: var(--gray-900);
+    font-weight: 600;
+    position: relative;
+}
+
+.feature-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 9999px;
+    color: var(--brand-primary-hover);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: all 0.2s;
+}
+
+.badge:hover {
+    background: rgba(16, 185, 129, 0.15);
+    border-color: var(--brand-primary);
+    transform: translateY(-2px);
 }
 
 .hero-cta {
