@@ -4,17 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>GreenThread - Distributed AI Infrastructure</title>
+        <link rel="icon" type="image/png" href="./images/icon.png" />
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <!-- Animated Background -->
-        <div class="animated-background">
-            <div class="gradient-base"></div>
-            <div class="blur-circle circle-1"></div>
-            <div class="blur-circle circle-2"></div>
-            <div class="blur-circle circle-3"></div>
-        </div>
-
         <!-- Navigation -->
         <nav class="nav">
             <div class="nav-container">
@@ -26,11 +19,7 @@
                     />
                 </div>
                 <div class="nav-links">
-                    <a
-                        href="https://app.greenthread.ai/login"
-                        class="btn-secondary"
-                        >Login</a
-                    >
+                    <a href="#demo" class="btn-secondary">Watch Demo</a>
                     <a href="mailto:sales@greenthread.ai" class="btn-primary"
                         >Contact Sales</a
                     >
@@ -42,22 +31,33 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg
+                            class="badge-icon"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M8 0L9.79611 6.20389L16 8L9.79611 9.79611L8 16L6.20389 9.79611L0 8L6.20389 6.20389L8 0Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                        <span>OpenAI API Compatible</span>
+                    </div>
                     <h1 class="hero-title">
-                        Run more models with
-                        <span class="gradient-text">less GPUs</span>—without the
-                        slowdown
+                        Run 10× more AI models on the same GPUs
+                        <span class="highlight">without cold starts</span>
                     </h1>
                     <p class="hero-subtitle">
-                        The only AI inference platform that's OpenAI API
-                        compatible, enterprise ready, and never deprecates your
-                        models. From hyperscalers to enterprises, GreenThread
-                        powers AI at scale.
+                        GreenThread is a high-density inference engine that
+                        keeps execution resident and swaps model state on
+                        demand. OpenAI-compatible, enterprise-ready, and built
+                        for operators who care about utilisation, latency, and
+                        control.
                     </p>
-                    <div class="feature-badges">
-                        <span class="badge">Your Infrastructure</span>
-                        <span class="badge">Your Models</span>
-                        <span class="badge">Your Control</span>
-                    </div>
                     <div class="hero-cta">
                         <form id="waitlist-form" class="waitlist-form">
                             <div class="form-group">
@@ -83,7 +83,273 @@
                             </div>
                             <p id="status" class="form-status"></p>
                         </form>
+                        <p class="form-note">
+                            Join the waitlist for early access.
+                        </p>
                     </div>
+                    <div class="trust-indicators">
+                        <span class="trust-text">Trusted by teams at</span>
+                        <div class="trust-logos">
+                            <span class="trust-badge">Hyperscalers</span>
+                            <span class="trust-badge">Enterprises</span>
+                            <span class="trust-badge">AI Companies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Built for high-density inference
+                    </h2>
+                    <p class="section-subtitle">
+                        Serve many models concurrently without dedicating
+                        hardware
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect
+                                    x="3"
+                                    y="3"
+                                    width="7"
+                                    height="7"
+                                    rx="1"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                />
+                                <rect
+                                    x="14"
+                                    y="3"
+                                    width="7"
+                                    height="7"
+                                    rx="1"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                />
+                                <rect
+                                    x="14"
+                                    y="14"
+                                    width="7"
+                                    height="7"
+                                    rx="1"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                />
+                                <rect
+                                    x="3"
+                                    y="14"
+                                    width="7"
+                                    height="7"
+                                    rx="1"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">50+ models per GPU node</h3>
+                        <p class="feature-description">
+                            Run an order of magnitude more models on the same
+                            hardware — without cold starts.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">
+                            Sub-2s deterministic model wake
+                        </h3>
+                        <p class="feature-description">
+                            Predictable model activation in seconds, not tens of
+                            seconds. No engine restarts required.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                />
+                                <path
+                                    d="M12 5V3M12 21V19M19 12H21M3 12H5M18.36 18.36L19.78 19.78M4.22 4.22L5.64 5.64M18.36 5.64L19.78 4.22M4.22 19.78L5.64 18.36"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">
+                            Zero engine restart overhead
+                        </h3>
+                        <p class="feature-description">
+                            No Python, CUDA, or runtime reinitialisation on
+                            model switch. The inference engine stays resident.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits">
+            <div class="container">
+                <div class="benefits-content">
+                    <div class="benefits-text">
+                        <h2 class="benefits-title">
+                            Designed for GPU operators
+                        </h2>
+                        <p class="benefits-description">
+                            Most inference platforms restart the engine when
+                            switching models. GreenThread keeps the engine alive
+                            and swaps model state instead — so GPUs stay busy
+                            and models stay responsive.
+                        </p>
+                        <ul class="benefits-list">
+                            <li class="benefit-item">
+                                <svg
+                                    class="benefit-icon"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.6666 5L7.49998 14.1667L3.33331 10"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <span
+                                    >Host large model catalogs without
+                                    one-model-per-GPU economics</span
+                                >
+                            </li>
+                            <li class="benefit-item">
+                                <svg
+                                    class="benefit-icon"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.6666 5L7.49998 14.1667L3.33331 10"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <span
+                                    >Handle bursty demand without cold
+                                    starts</span
+                                >
+                            </li>
+                            <li class="benefit-item">
+                                <svg
+                                    class="benefit-icon"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16.6666 5L7.49998 14.1667L3.33331 10"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                                <span
+                                    >Maintain data sovereignty and
+                                    infrastructure control</span
+                                >
+                            </li>
+                        </ul>
+                        <a
+                            href="mailto:sales@greenthread.ai"
+                            class="btn-primary"
+                        >
+                            Talk to Sales
+                        </a>
+                    </div>
+                    <div class="benefits-visual">
+                        <div class="stat-card">
+                            <div class="stat-number">~1s</div>
+                            <div class="stat-label">
+                                Sub-second model wake time (P50)
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">~2-3s</div>
+                            <div class="stat-label">
+                                P95 wake latency across hundreds of transitions
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">99.9%</div>
+                            <div class="stat-label">
+                                Uptime for enterprise deployments
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Lower cost per model served</h2>
+                    <p class="cta-subtitle">
+                        By sharing GPUs across many workloads without cold
+                        starts. Join the waitlist for early access.
+                    </p>
+                    <a href="mailto:sales@greenthread.ai" class="btn-cta">
+                        Contact Sales
+                    </a>
                 </div>
             </div>
         </section>
@@ -99,7 +365,6 @@
                                 alt="GreenThread"
                                 class="footer-logo-img"
                             />
-                            <span class="footer-logo-text">GreenThread</span>
                         </div>
                         <p class="footer-description">
                             Distributed AI inference at scale. Deploy anywhere,
@@ -111,14 +376,9 @@
                         <a
                             href="mailto:sales@greenthread.ai"
                             class="footer-link"
-                            >Contact Sales</a
+                            >sales@greenthread.ai</a
                         >
                     </div>
-                    <!--<div class="footer-column">
-                        <h4 class="footer-title">Legal</h4>
-                        <a href="#" class="footer-link">Privacy Policy</a>
-                        <a href="#" class="footer-link">Terms of Service</a>
-                    </div>-->
                 </div>
                 <div class="footer-bottom">
                     <p>&copy; 2025 GreenThread. All rights reserved.</p>
