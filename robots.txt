@@ -4,4 +4,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://greenthread.ai/sitemap.xml
+Sitemap: https://www.greenthread.ai/sitemap.xml
