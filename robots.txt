@@ -1,0 +1,7 @@
+# Welcome crawlers! GreenThread is open to indexing.
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.greenthread.ai/sitemap.xml
