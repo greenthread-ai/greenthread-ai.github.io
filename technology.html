@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Technology - GreenThread</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="gradient-base"></div>
+            <div class="blur-circle circle-1"></div>
+            <div class="blur-circle circle-2"></div>
+            <div class="blur-circle circle-3"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img
+                            src="./images/logo.png"
+                            alt="GreenThread"
+                            class="logo"
+                        />
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Features</a>
+                        <div class="dropdown-menu">
+                            <a href="features/model-multiplexing.html" class="dropdown-item">Model Multiplexing</a>
+                            <a href="features/hybrid-training.html" class="dropdown-item">Hybrid Training</a>
+                            <a href="features/inference-ha.html" class="dropdown-item">Inference HA</a>
+                            <a href="features/guardrails-compliance.html" class="dropdown-item">Guardrails & Compliance</a>
+                            <a href="features/instant-model-deployment.html" class="dropdown-item">Instant Model Deployment</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Use Cases</a>
+                        <div class="dropdown-menu">
+                            <a href="use-cases/neoclouds.html" class="dropdown-item">NeoClouds</a>
+                            <a href="use-cases/private-enterprise.html" class="dropdown-item">Private Enterprise</a>
+                            <a href="use-cases/edge-computing.html" class="dropdown-item">Edge Computing</a>
+                            <a href="use-cases/universities.html" class="dropdown-item">Universities</a>
+                            <a href="use-cases/government.html" class="dropdown-item">Government</a>
+                        </div>
+                    </div>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="technology.html" class="nav-link">Technology</a>
+                    <a
+                        href="https://app.greenthread.ai/login"
+                        class="btn-secondary"
+                        >Login</a
+                    >
+                    <a href="mailto:sales@greenthread.ai" class="btn-primary"
+                        >Contact Sales</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <section class="hero hero-about">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">The engine behind intelligent inference</h1>
+                    <p class="hero-subtitle">
+                        GreenThread's inference engine fundamentally reimagines how AI models share GPU resources.
+                        The result: dramatically higher utilization, lower costs, and the ability to serve
+                        hundreds of models from infrastructure that traditionally served a handful.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Problem Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">The GPU utilization problem</h2>
+                        <p class="feature-lead">
+                            Traditional inference is fundamentally wasteful.
+                        </p>
+                        <p class="feature-description">
+                            Most AI inference deployments dedicate entire GPUs to individual models. The model sits in GPU memory, waiting for requests. Between requests, those expensive compute resources sit idle. Studies consistently show GPU utilization rates of 15-30% in production inference workloads—meaning 70-85% of your GPU investment generates zero value.
+                        </p>
+                        <div class="problem-stats">
+                            <div class="problem-stat">
+                                <span class="stat-value bad">15-30%</span>
+                                <span class="stat-label">Typical GPU utilization</span>
+                            </div>
+                            <div class="problem-stat">
+                                <span class="stat-value bad">1 model</span>
+                                <span class="stat-label">Per dedicated GPU</span>
+                            </div>
+                            <div class="problem-stat">
+                                <span class="stat-value bad">70-85%</span>
+                                <span class="stat-label">Wasted capacity</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="utilization-visual">
+                            <div class="util-comparison">
+                                <div class="util-card traditional">
+                                    <div class="util-header">Traditional Approach</div>
+                                    <div class="util-gpus">
+                                        <div class="util-gpu">
+                                            <div class="gpu-label">GPU 1</div>
+                                            <div class="gpu-bar">
+                                                <div class="gpu-fill" style="width: 25%"></div>
+                                            </div>
+                                            <div class="gpu-model">Model A</div>
+                                        </div>
+                                        <div class="util-gpu">
+                                            <div class="gpu-label">GPU 2</div>
+                                            <div class="gpu-bar">
+                                                <div class="gpu-fill" style="width: 18%"></div>
+                                            </div>
+                                            <div class="gpu-model">Model B</div>
+                                        </div>
+                                        <div class="util-gpu">
+                                            <div class="gpu-label">GPU 3</div>
+                                            <div class="gpu-bar">
+                                                <div class="gpu-fill" style="width: 22%"></div>
+                                            </div>
+                                            <div class="gpu-model">Model C</div>
+                                        </div>
+                                    </div>
+                                    <div class="util-footer">3 GPUs → 3 models</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Approach Section -->
+        <section class="feature-section-dark">
+            <div class="container">
+                <div class="feature-content reverse">
+                    <div class="feature-text">
+                        <h2 class="section-title">A fundamentally different approach</h2>
+                        <p class="feature-lead">
+                            What if GPUs could serve hundreds of models, not just one?
+                        </p>
+                        <p class="feature-description">
+                            GreenThread's inference engine treats GPU resources as a shared pool rather than dedicated silos. Our proprietary scheduling and memory management technology enables rapid context switching between models, serving requests across your entire model catalog from a fraction of the hardware traditionally required.
+                        </p>
+                        <div class="approach-features">
+                            <div class="approach-feature">
+                                <div class="approach-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                        <line x1="8" y1="21" x2="16" y2="21"/>
+                                        <line x1="12" y1="17" x2="12" y2="21"/>
+                                    </svg>
+                                </div>
+                                <div class="approach-text">
+                                    <h4>Shared GPU pools</h4>
+                                    <p>Models share GPU resources dynamically based on demand</p>
+                                </div>
+                            </div>
+                            <div class="approach-feature">
+                                <div class="approach-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                </div>
+                                <div class="approach-text">
+                                    <h4>Millisecond switching</h4>
+                                    <p>Context switch between models in single-digit milliseconds</p>
+                                </div>
+                            </div>
+                            <div class="approach-feature">
+                                <div class="approach-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 20V10"/>
+                                        <path d="M12 20V4"/>
+                                        <path d="M6 20v-6"/>
+                                    </svg>
+                                </div>
+                                <div class="approach-text">
+                                    <h4>Intelligent scheduling</h4>
+                                    <p>Requests routed optimally based on model state and load</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="utilization-visual">
+                            <div class="util-comparison">
+                                <div class="util-card greenthread">
+                                    <div class="util-header">GreenThread Approach</div>
+                                    <div class="util-gpus">
+                                        <div class="util-gpu">
+                                            <div class="gpu-label">GPU 1</div>
+                                            <div class="gpu-bar">
+                                                <div class="gpu-fill high" style="width: 87%"></div>
+                                            </div>
+                                            <div class="gpu-model multi">50+ models</div>
+                                        </div>
+                                        <div class="util-gpu">
+                                            <div class="gpu-label">GPU 2</div>
+                                            <div class="gpu-bar">
+                                                <div class="gpu-fill high" style="width: 91%"></div>
+                                            </div>
+                                            <div class="gpu-model multi">50+ models</div>
+                                        </div>
+                                        <div class="util-gpu">
+                                            <div class="gpu-label">GPU 3</div>
+                                            <div class="gpu-bar">
+                                                <div class="gpu-fill high" style="width: 84%"></div>
+                                            </div>
+                                            <div class="gpu-model multi">50+ models</div>
+                                        </div>
+                                    </div>
+                                    <div class="util-footer highlight">3 GPUs → 150+ models</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Innovation Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="section-header" style="margin-bottom: 3rem;">
+                    <h2 class="section-title">Core innovation: Model Multiplexing</h2>
+                    <p class="section-subtitle">The technology that makes it all possible</p>
+                </div>
+                <div class="innovation-grid">
+                    <div class="innovation-card">
+                        <div class="innovation-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                                <line x1="6" y1="18" x2="6.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <h3 class="innovation-title">Intelligent Memory Management</h3>
+                        <p class="innovation-description">
+                            Our engine manages GPU memory as a unified resource pool, dynamically allocating and deallocating model weights based on request patterns. Hot models stay resident while cold models are efficiently swapped, all invisible to the application layer.
+                        </p>
+                    </div>
+                    <div class="innovation-card">
+                        <div class="innovation-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <h3 class="innovation-title">Predictive Scheduling</h3>
+                        <p class="innovation-description">
+                            Request routing decisions are made in microseconds using learned patterns. The scheduler predicts which models will be needed and pre-positions resources accordingly, minimizing latency while maximizing throughput across the entire model fleet.
+                        </p>
+                    </div>
+                    <div class="innovation-card">
+                        <div class="innovation-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="innovation-title">Zero-Copy Context Switching</h3>
+                        <p class="innovation-description">
+                            Traditional model switching requires expensive memory copies. Our proprietary approach eliminates these copies through innovative memory mapping techniques, enabling model switches in milliseconds rather than seconds.
+                        </p>
+                    </div>
+                    <div class="innovation-card">
+                        <div class="innovation-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="innovation-title">Automatic Optimization</h3>
+                        <p class="innovation-description">
+                            Models are automatically optimized for the target hardware during deployment. Quantization, kernel fusion, and hardware-specific tuning happen transparently, ensuring every model runs at peak efficiency without manual intervention.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section class="feature-section-dark">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">Distributed by design</h2>
+                        <p class="feature-lead">
+                            Built for resilience, scale, and flexibility from day one.
+                        </p>
+                        <p class="feature-description">
+                            GreenThread isn't a monolithic inference server—it's a distributed system designed to scale horizontally across any infrastructure. Add nodes to increase capacity. Lose a node, and traffic automatically reroutes. Deploy across clouds, on-premise, or at the edge with the same unified control plane.
+                        </p>
+                        <div class="arch-capabilities">
+                            <div class="arch-cap">
+                                <span class="arch-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                                    </svg>
+                                </span>
+                                <span>Horizontal scaling</span>
+                            </div>
+                            <div class="arch-cap">
+                                <span class="arch-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </span>
+                                <span>Automatic failover</span>
+                            </div>
+                            <div class="arch-cap">
+                                <span class="arch-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="2" y1="12" x2="22" y2="12"/>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                    </svg>
+                                </span>
+                                <span>Multi-region deployment</span>
+                            </div>
+                            <div class="arch-cap">
+                                <span class="arch-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                </span>
+                                <span>Air-gapped operation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="arch-visual">
+                            <div class="arch-diagram">
+                                <div class="arch-layer control">
+                                    <div class="layer-label">Control Plane</div>
+                                    <div class="layer-items">
+                                        <span>Scheduler</span>
+                                        <span>Model Registry</span>
+                                        <span>Monitoring</span>
+                                    </div>
+                                </div>
+                                <div class="arch-connector">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"/>
+                                        <polyline points="19 12 12 19 5 12"/>
+                                    </svg>
+                                </div>
+                                <div class="arch-layer data">
+                                    <div class="layer-label">Inference Nodes</div>
+                                    <div class="layer-nodes">
+                                        <div class="arch-node">
+                                            <span class="node-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                                                    <rect x="9" y="9" width="6" height="6"/>
+                                                    <line x1="9" y1="1" x2="9" y2="4"/>
+                                                    <line x1="15" y1="1" x2="15" y2="4"/>
+                                                    <line x1="9" y1="20" x2="9" y2="23"/>
+                                                    <line x1="15" y1="20" x2="15" y2="23"/>
+                                                    <line x1="20" y1="9" x2="23" y2="9"/>
+                                                    <line x1="20" y1="14" x2="23" y2="14"/>
+                                                    <line x1="1" y1="9" x2="4" y2="9"/>
+                                                    <line x1="1" y1="14" x2="4" y2="14"/>
+                                                </svg>
+                                            </span>
+                                            <span>Node 1</span>
+                                        </div>
+                                        <div class="arch-node">
+                                            <span class="node-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                                                    <rect x="9" y="9" width="6" height="6"/>
+                                                    <line x1="9" y1="1" x2="9" y2="4"/>
+                                                    <line x1="15" y1="1" x2="15" y2="4"/>
+                                                    <line x1="9" y1="20" x2="9" y2="23"/>
+                                                    <line x1="15" y1="20" x2="15" y2="23"/>
+                                                    <line x1="20" y1="9" x2="23" y2="9"/>
+                                                    <line x1="20" y1="14" x2="23" y2="14"/>
+                                                    <line x1="1" y1="9" x2="4" y2="9"/>
+                                                    <line x1="1" y1="14" x2="4" y2="14"/>
+                                                </svg>
+                                            </span>
+                                            <span>Node 2</span>
+                                        </div>
+                                        <div class="arch-node">
+                                            <span class="node-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                                                    <rect x="9" y="9" width="6" height="6"/>
+                                                    <line x1="9" y1="1" x2="9" y2="4"/>
+                                                    <line x1="15" y1="1" x2="15" y2="4"/>
+                                                    <line x1="9" y1="20" x2="9" y2="23"/>
+                                                    <line x1="15" y1="20" x2="15" y2="23"/>
+                                                    <line x1="20" y1="9" x2="23" y2="9"/>
+                                                    <line x1="20" y1="14" x2="23" y2="14"/>
+                                                    <line x1="1" y1="9" x2="4" y2="9"/>
+                                                    <line x1="1" y1="14" x2="4" y2="14"/>
+                                                </svg>
+                                            </span>
+                                            <span>Node 3</span>
+                                        </div>
+                                        <div class="arch-node add">
+                                            <span class="node-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                                </svg>
+                                            </span>
+                                            <span>Add more</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deployment Flexibility Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content reverse">
+                    <div class="feature-text">
+                        <h2 class="section-title">Deploy anywhere</h2>
+                        <p class="feature-lead">
+                            Your infrastructure, your rules.
+                        </p>
+                        <p class="feature-description">
+                            GreenThread runs wherever you need it. Public cloud, private data center, edge locations, or fully air-gapped environments. The same engine, the same APIs, the same management interface—regardless of where it's deployed. Your data never has to leave your security boundary.
+                        </p>
+                        <div class="deployment-options">
+                            <div class="deploy-option">
+                                <div class="deploy-icon cloud">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                                    </svg>
+                                </div>
+                                <div class="deploy-text">
+                                    <h4>Public Cloud</h4>
+                                    <p>AWS, GCP, Azure, or any cloud provider</p>
+                                </div>
+                            </div>
+                            <div class="deploy-option">
+                                <div class="deploy-icon onprem">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                                        <line x1="6" y1="6" x2="6.01" y2="6"/>
+                                        <line x1="6" y1="18" x2="6.01" y2="18"/>
+                                    </svg>
+                                </div>
+                                <div class="deploy-text">
+                                    <h4>On-Premise</h4>
+                                    <p>Your data center, your control</p>
+                                </div>
+                            </div>
+                            <div class="deploy-option">
+                                <div class="deploy-icon edge">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                    </svg>
+                                </div>
+                                <div class="deploy-text">
+                                    <h4>Edge</h4>
+                                    <p>Distributed locations, unified management</p>
+                                </div>
+                            </div>
+                            <div class="deploy-option">
+                                <div class="deploy-icon airgap">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                </div>
+                                <div class="deploy-text">
+                                    <h4>Air-Gapped</h4>
+                                    <p>Fully offline, zero external dependencies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="deploy-visual">
+                            <div class="deploy-map">
+                                <div class="map-center">
+                                    <div class="center-logo">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="3"/>
+                                            <path d="M12 1v6"/>
+                                            <path d="M12 17v6"/>
+                                            <path d="M4.22 4.22l4.24 4.24"/>
+                                            <path d="M15.54 15.54l4.24 4.24"/>
+                                            <path d="M1 12h6"/>
+                                            <path d="M17 12h6"/>
+                                            <path d="M4.22 19.78l4.24-4.24"/>
+                                            <path d="M15.54 8.46l4.24-4.24"/>
+                                        </svg>
+                                    </div>
+                                    <span>GreenThread</span>
+                                </div>
+                                <div class="map-locations">
+                                    <div class="map-loc" style="--angle: 0deg;">
+                                        <span class="loc-dot"></span>
+                                        <span class="loc-label">Cloud</span>
+                                    </div>
+                                    <div class="map-loc" style="--angle: 90deg;">
+                                        <span class="loc-dot"></span>
+                                        <span class="loc-label">Data Center</span>
+                                    </div>
+                                    <div class="map-loc" style="--angle: 180deg;">
+                                        <span class="loc-dot"></span>
+                                        <span class="loc-label">Edge</span>
+                                    </div>
+                                    <div class="map-loc" style="--angle: 270deg;">
+                                        <span class="loc-dot"></span>
+                                        <span class="loc-label">Secure Facility</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Section -->
+        <section class="feature-section-dark">
+            <div class="container">
+                <div class="section-header" style="margin-bottom: 3rem;">
+                    <h2 class="section-title">Performance that speaks for itself</h2>
+                    <p class="section-subtitle">Real results from production deployments</p>
+                </div>
+                <div class="performance-grid">
+                    <div class="perf-card">
+                        <div class="perf-value">50x</div>
+                        <div class="perf-label">More models per GPU</div>
+                        <p class="perf-description">Serve 50+ models from hardware that traditionally served one</p>
+                    </div>
+                    <div class="perf-card">
+                        <div class="perf-value">85%+</div>
+                        <div class="perf-label">GPU utilization</div>
+                        <p class="perf-description">Compared to industry average of 15-30%</p>
+                    </div>
+                    <div class="perf-card">
+                        <div class="perf-value">&lt;5ms</div>
+                        <div class="perf-label">Model switch time</div>
+                        <p class="perf-description">Context switch between models in milliseconds</p>
+                    </div>
+                    <div class="perf-card">
+                        <div class="perf-value">99.99%</div>
+                        <div class="perf-label">Availability</div>
+                        <p class="perf-description">Built-in redundancy and automatic failover</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integration Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">Drop-in compatible</h2>
+                        <p class="feature-lead">
+                            Works with what you already use.
+                        </p>
+                        <p class="feature-description">
+                            GreenThread provides OpenAI-compatible APIs, making migration simple. Your existing applications, SDKs, and tools work without modification. Deploy models from HuggingFace with a single click. Integrate with your existing MLOps pipeline. No vendor lock-in, no proprietary formats.
+                        </p>
+                        <ul class="feature-list">
+                            <li>OpenAI-compatible REST API</li>
+                            <li>HuggingFace model hub integration</li>
+                            <li>Standard metrics and logging formats</li>
+                            <li>Kubernetes-native deployment</li>
+                            <li>Terraform and infrastructure-as-code support</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="compat-visual">
+                            <div class="compat-grid">
+                                <div class="compat-item">
+                                    <div class="compat-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.8956zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/>
+                                        </svg>
+                                    </div>
+                                    <span>OpenAI API</span>
+                                </div>
+                                <div class="compat-item">
+                                    <div class="compat-icon hf">HF</div>
+                                    <span>HuggingFace</span>
+                                </div>
+                                <div class="compat-item">
+                                    <div class="compat-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M10.204 14.35l.007.01-.999 2.413a5.171 5.171 0 0 1-2.075-2.597l2.578-.437.004.005a.44.44 0 0 1 .484.606zm-.833-2.129a.44.44 0 0 0 .173-.756l.002-.011L7.585 9.7a5.143 5.143 0 0 0-.73 3.255l2.514-.725.002-.009zm1.145-1.98a.44.44 0 0 0 .699-.337l.01-.005.15-2.62a5.144 5.144 0 0 0-3.01 1.442l2.147 1.523.004-.002zm.76 2.75l.723.349.722-.347.18-.78-.5-.623h-.804l-.5.623.179.778zm1.5-2.095a.44.44 0 0 0 .7.336l.008.003 2.134-1.513a5.188 5.188 0 0 0-2.992-1.442l.148 2.615.002.001zm10.876 5.97l-5.773 7.181a1.6 1.6 0 0 1-1.248.594H9.261a1.6 1.6 0 0 1-1.247-.594l-5.776-7.18a1.583 1.583 0 0 1-.307-1.34L3.823 5.98a1.6 1.6 0 0 1 .947-1.152l7.157-2.922a1.6 1.6 0 0 1 1.22 0l7.157 2.922a1.6 1.6 0 0 1 .947 1.152l1.892 7.97a1.583 1.583 0 0 1-.307 1.34zm-8.06-6.118a.44.44 0 0 0 .168.764l-.001.01 2.514.727a5.18 5.18 0 0 0-.726-3.266l-1.955 1.765zm2.563 1.412h.003a.44.44 0 0 0-.483.606l-.005.004.994 2.405a5.19 5.19 0 0 0 2.074-2.588l-2.583-.427z"/>
+                                        </svg>
+                                    </div>
+                                    <span>Kubernetes</span>
+                                </div>
+                                <div class="compat-item">
+                                    <div class="compat-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+                                        </svg>
+                                    </div>
+                                    <span>Prometheus</span>
+                                </div>
+                                <div class="compat-item">
+                                    <div class="compat-icon tf">TF</div>
+                                    <span>Terraform</span>
+                                </div>
+                                <div class="compat-item">
+                                    <div class="compat-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M11.146 0h3.924v18.166c-2.013.382-3.491.535-5.096.535-4.791 0-7.288-2.166-7.288-6.32 0-4.002 2.65-6.6 6.753-6.6.637 0 1.121.05 1.707.203zm0 9.143a3.894 3.894 0 0 0-1.325-.204c-1.988 0-3.134 1.223-3.134 3.365 0 2.09 1.096 3.236 3.109 3.236.433 0 .79-.025 1.35-.102V9.142zM21.314 6.06v9.098c0 3.134-.229 4.638-.917 5.937-.637 1.249-1.478 2.039-3.211 2.905l-3.644-1.733c1.733-.815 2.574-1.53 3.109-2.625.56-1.121.764-2.42.764-5.937V6.06h3.899zM17.39.021h3.924v4.026H17.39z"/>
+                                        </svg>
+                                    </div>
+                                    <span>Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to see the technology in action?</h2>
+                    <p class="cta-subtitle">
+                        Schedule a technical deep-dive with our engineering team and see how GreenThread
+                        can transform your AI infrastructure.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="mailto:sales@greenthread.ai" class="btn-primary btn-lg">Schedule a Demo</a>
+                        <a href="features/model-multiplexing.html" class="btn-secondary btn-lg">Explore Features</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img
+                                src="./images/logo.png"
+                                alt="GreenThread"
+                                class="footer-logo-img"
+                            />
+                            <span class="footer-logo-text">GreenThread</span>
+                        </div>
+                        <p class="footer-description">
+                            Distributed AI inference at scale. Deploy anywhere,
+                            scale effortlessly.
+                        </p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Contact</h4>
+                        <a
+                            href="mailto:sales@greenthread.ai"
+                            class="footer-link"
+                            >Contact Sales</a
+                        >
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenThread. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

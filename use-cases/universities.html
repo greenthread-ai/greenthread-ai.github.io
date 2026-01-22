@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Universities - GreenThread</title>
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+    <body>
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="gradient-base"></div>
+            <div class="blur-circle circle-1"></div>
+            <div class="blur-circle circle-2"></div>
+            <div class="blur-circle circle-3"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <img
+                            src="../images/logo.png"
+                            alt="GreenThread"
+                            class="logo"
+                        />
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="../about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Features</a>
+                        <div class="dropdown-menu">
+                            <a href="../features/model-multiplexing.html" class="dropdown-item">Model Multiplexing</a>
+                            <a href="../features/hybrid-training.html" class="dropdown-item">Hybrid Training</a>
+                            <a href="../features/inference-ha.html" class="dropdown-item">Inference HA</a>
+                            <a href="../features/guardrails-compliance.html" class="dropdown-item">Guardrails & Compliance</a>
+                            <a href="../features/instant-model-deployment.html" class="dropdown-item">Instant Model Deployment</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Use Cases</a>
+                        <div class="dropdown-menu">
+                            <a href="neoclouds.html" class="dropdown-item">NeoClouds</a>
+                            <a href="private-enterprise.html" class="dropdown-item">Private Enterprise</a>
+                            <a href="edge-computing.html" class="dropdown-item">Edge Computing</a>
+                            <a href="universities.html" class="dropdown-item">Universities</a>
+                            <a href="government.html" class="dropdown-item">Government</a>
+                        </div>
+                    </div>
+                    <a href="../pricing.html" class="nav-link">Pricing</a>
+                    <a href="../technology.html" class="nav-link">Technology</a>
+                    <a
+                        href="https://app.greenthread.ai/login"
+                        class="btn-secondary"
+                        >Login</a
+                    >
+                    <a href="mailto:sales@greenthread.ai" class="btn-primary"
+                        >Contact Sales</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <section class="hero hero-about">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">GPU resources for the entire campus</h1>
+                    <p class="hero-subtitle">
+                        Limited GPUs, unlimited demand. GreenThread helps universities serve
+                        every department, course, and research project from a single shared
+                        GPU cluster—without the contention headaches.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serve Everyone Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">One cluster serves everyone</h2>
+                        <p class="feature-lead">
+                            Computer Science, Biology, Business, Engineering—all sharing the same GPUs.
+                        </p>
+                        <p class="feature-description">
+                            Every department wants AI capabilities. The CS department needs LLMs for their NLP course. Biology wants protein folding models. Business school is teaching AI strategy with live demos. Without multiplexing, you'd need dedicated GPUs for each. With GreenThread, a single cluster serves them all—switching between models in milliseconds as requests come in.
+                        </p>
+                        <div class="department-list">
+                            <div class="department-item">
+                                <span class="dept-icon">CS</span>
+                                <span class="dept-name">Computer Science</span>
+                                <span class="dept-use">LLMs, Code Generation</span>
+                            </div>
+                            <div class="department-item">
+                                <span class="dept-icon">BIO</span>
+                                <span class="dept-name">Biology</span>
+                                <span class="dept-use">Protein Folding, Genomics</span>
+                            </div>
+                            <div class="department-item">
+                                <span class="dept-icon">BUS</span>
+                                <span class="dept-name">Business</span>
+                                <span class="dept-use">Sentiment Analysis, Forecasting</span>
+                            </div>
+                            <div class="department-item">
+                                <span class="dept-icon">ENG</span>
+                                <span class="dept-name">Engineering</span>
+                                <span class="dept-use">CAD Generation, Simulation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="campus-visual">
+                            <div class="campus-cluster">
+                                <div class="cluster-header">
+                                    <span class="cluster-title">University GPU Cluster</span>
+                                    <span class="cluster-spec">8x NVIDIA H100</span>
+                                </div>
+                                <div class="cluster-stats">
+                                    <div class="cluster-stat">
+                                        <span class="stat-value">47</span>
+                                        <span class="stat-label">Models available</span>
+                                    </div>
+                                    <div class="cluster-stat">
+                                        <span class="stat-value">12</span>
+                                        <span class="stat-label">Departments served</span>
+                                    </div>
+                                    <div class="cluster-stat">
+                                        <span class="stat-value">2,400+</span>
+                                        <span class="stat-label">Active users</span>
+                                    </div>
+                                </div>
+                                <div class="cluster-activity">
+                                    <div class="activity-header">Live requests</div>
+                                    <div class="activity-feed">
+                                        <div class="activity-item">
+                                            <span class="activity-dept">CS</span>
+                                            <span class="activity-model">CodeLlama-34B</span>
+                                            <span class="activity-status active"></span>
+                                        </div>
+                                        <div class="activity-item">
+                                            <span class="activity-dept">BIO</span>
+                                            <span class="activity-model">ESMFold</span>
+                                            <span class="activity-status active"></span>
+                                        </div>
+                                        <div class="activity-item">
+                                            <span class="activity-dept">BUS</span>
+                                            <span class="activity-model">Llama-3-70B</span>
+                                            <span class="activity-status active"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching and Research Section -->
+        <section class="feature-section-dark">
+            <div class="container">
+                <div class="feature-content reverse">
+                    <div class="feature-text">
+                        <h2 class="section-title">Teaching by day, research by night</h2>
+                        <p class="feature-lead">
+                            Inference for coursework. Training for research. Same GPUs.
+                        </p>
+                        <p class="feature-description">
+                            During class hours, students need responsive inference for assignments and projects. After hours, research teams need those same GPUs for fine-tuning and training experiments. GreenThread's hybrid training automatically balances these workloads—no manual scheduling, no conflicts, no wasted capacity.
+                        </p>
+                        <div class="workload-types">
+                            <div class="workload-type">
+                                <div class="workload-icon teaching">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                    </svg>
+                                </div>
+                                <div class="workload-content">
+                                    <h4>Teaching workloads</h4>
+                                    <p>Low-latency inference for interactive coursework and assignments</p>
+                                </div>
+                            </div>
+                            <div class="workload-type">
+                                <div class="workload-icon research">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                                    </svg>
+                                </div>
+                                <div class="workload-content">
+                                    <h4>Research workloads</h4>
+                                    <p>Long-running fine-tuning and training jobs for papers and experiments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="academic-schedule">
+                            <div class="schedule-header">Weekly GPU utilization</div>
+                            <div class="schedule-grid">
+                                <div class="schedule-row">
+                                    <span class="schedule-day">Mon</span>
+                                    <div class="schedule-bar">
+                                        <div class="bar-segment teaching" style="width: 50%"></div>
+                                        <div class="bar-segment research" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                                <div class="schedule-row">
+                                    <span class="schedule-day">Tue</span>
+                                    <div class="schedule-bar">
+                                        <div class="bar-segment teaching" style="width: 55%"></div>
+                                        <div class="bar-segment research" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                                <div class="schedule-row">
+                                    <span class="schedule-day">Wed</span>
+                                    <div class="schedule-bar">
+                                        <div class="bar-segment teaching" style="width: 45%"></div>
+                                        <div class="bar-segment research" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="schedule-row">
+                                    <span class="schedule-day">Thu</span>
+                                    <div class="schedule-bar">
+                                        <div class="bar-segment teaching" style="width: 50%"></div>
+                                        <div class="bar-segment research" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                                <div class="schedule-row">
+                                    <span class="schedule-day">Fri</span>
+                                    <div class="schedule-bar">
+                                        <div class="bar-segment teaching" style="width: 40%"></div>
+                                        <div class="bar-segment research" style="width: 55%"></div>
+                                    </div>
+                                </div>
+                                <div class="schedule-row weekend">
+                                    <span class="schedule-day">Sat</span>
+                                    <div class="schedule-bar">
+                                        <div class="bar-segment teaching" style="width: 10%"></div>
+                                        <div class="bar-segment research" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="schedule-row weekend">
+                                    <span class="schedule-day">Sun</span>
+                                    <div class="schedule-bar">
+                                        <div class="bar-segment teaching" style="width: 5%"></div>
+                                        <div class="bar-segment research" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-legend">
+                                <div class="legend-item">
+                                    <span class="legend-color teaching"></span>
+                                    <span>Teaching</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color research"></span>
+                                    <span>Research</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fair Access Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">Fair access for everyone</h2>
+                        <p class="feature-lead">
+                            No more GPU hogging. Quotas and priorities that actually work.
+                        </p>
+                        <p class="feature-description">
+                            When 500 students submit assignments at 11:59pm, someone's requests will queue. GreenThread's multi-tenant system ensures fair access with per-user quotas, department priorities, and intelligent scheduling. Undergraduate coursework gets responsive inference. PhD research gets guaranteed training windows. Everyone gets what they need.
+                        </p>
+                        <div class="quota-features">
+                            <div class="quota-feature">
+                                <div class="quota-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                </div>
+                                <span>Per-user quotas</span>
+                            </div>
+                            <div class="quota-feature">
+                                <div class="quota-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="3" y1="9" x2="21" y2="9"/>
+                                        <line x1="9" y1="21" x2="9" y2="9"/>
+                                    </svg>
+                                </div>
+                                <span>Department allocations</span>
+                            </div>
+                            <div class="quota-feature">
+                                <div class="quota-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                                        <polyline points="16 7 22 7 22 13"/>
+                                    </svg>
+                                </div>
+                                <span>Priority queuing</span>
+                            </div>
+                            <div class="quota-feature">
+                                <div class="quota-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                </div>
+                                <span>Scheduled windows</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="queue-visual">
+                            <div class="queue-header">
+                                <span>Request queue</span>
+                                <span class="queue-count">127 active</span>
+                            </div>
+                            <div class="queue-list">
+                                <div class="queue-item priority-high">
+                                    <div class="queue-priority">
+                                        <span class="priority-badge high">High</span>
+                                    </div>
+                                    <div class="queue-info">
+                                        <span class="queue-user">Dr. Chen (Research)</span>
+                                        <span class="queue-task">Fine-tuning job</span>
+                                    </div>
+                                    <div class="queue-status running">Running</div>
+                                </div>
+                                <div class="queue-item priority-normal">
+                                    <div class="queue-priority">
+                                        <span class="priority-badge normal">Normal</span>
+                                    </div>
+                                    <div class="queue-info">
+                                        <span class="queue-user">CS301 Students (48)</span>
+                                        <span class="queue-task">Assignment inference</span>
+                                    </div>
+                                    <div class="queue-status running">Running</div>
+                                </div>
+                                <div class="queue-item priority-normal">
+                                    <div class="queue-priority">
+                                        <span class="priority-badge normal">Normal</span>
+                                    </div>
+                                    <div class="queue-info">
+                                        <span class="queue-user">BIO450 Lab</span>
+                                        <span class="queue-task">Protein analysis</span>
+                                    </div>
+                                    <div class="queue-status queued">Queued (2s)</div>
+                                </div>
+                                <div class="queue-item priority-low">
+                                    <div class="queue-priority">
+                                        <span class="priority-badge low">Low</span>
+                                    </div>
+                                    <div class="queue-info">
+                                        <span class="queue-user">Batch job</span>
+                                        <span class="queue-task">Model evaluation</span>
+                                    </div>
+                                    <div class="queue-status scheduled">Tonight 2am</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="feature-benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">AI infrastructure for academia</h2>
+                    <p class="section-subtitle">Purpose-built for the unique challenges of university environments</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Stretch limited budgets</h3>
+                        <p class="benefit-description">
+                            Serve 10x more users from the same GPU hardware. Make expensive compute accessible to every department.
+                        </p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Support diverse workloads</h3>
+                        <p class="benefit-description">
+                            From intro CS assignments to cutting-edge research. One platform handles everything the campus throws at it.
+                        </p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Eliminate wait times</h3>
+                        <p class="benefit-description">
+                            Students get responsive inference for coursework. Researchers get guaranteed windows for training. No more fighting for GPUs.
+                        </p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                <polyline points="2 17 12 22 22 17"/>
+                                <polyline points="2 12 12 17 22 12"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Unified training & inference</h3>
+                        <p class="benefit-description">
+                            Research teams can fine-tune models and serve them immediately. No separate infrastructure for experimentation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to democratize AI on your campus?</h2>
+                    <p class="cta-subtitle">
+                        See how GreenThread can help your university serve every department from a single GPU cluster.
+                    </p>
+                    <a href="mailto:sales@greenthread.ai" class="btn-primary btn-lg">Talk to Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img
+                                src="../images/logo.png"
+                                alt="GreenThread"
+                                class="footer-logo-img"
+                            />
+                            <span class="footer-logo-text">GreenThread</span>
+                        </div>
+                        <p class="footer-description">
+                            Distributed AI inference at scale. Deploy anywhere,
+                            scale effortlessly.
+                        </p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Contact</h4>
+                        <a
+                            href="mailto:sales@greenthread.ai"
+                            class="footer-link"
+                            >Contact Sales</a
+                        >
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenThread. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../script.js"></script>
+    </body>
+</html>

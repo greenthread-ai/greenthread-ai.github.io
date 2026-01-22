@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Inference HA - GreenThread</title>
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+    <body>
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="gradient-base"></div>
+            <div class="blur-circle circle-1"></div>
+            <div class="blur-circle circle-2"></div>
+            <div class="blur-circle circle-3"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <img
+                            src="../images/logo.png"
+                            alt="GreenThread"
+                            class="logo"
+                        />
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="../about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Features</a>
+                        <div class="dropdown-menu">
+                            <a href="model-multiplexing.html" class="dropdown-item">Model Multiplexing</a>
+                            <a href="hybrid-training.html" class="dropdown-item">Hybrid Training</a>
+                            <a href="inference-ha.html" class="dropdown-item">Inference HA</a>
+                            <a href="guardrails-compliance.html" class="dropdown-item">Guardrails & Compliance</a>
+                            <a href="instant-model-deployment.html" class="dropdown-item">Instant Model Deployment</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Use Cases</a>
+                        <div class="dropdown-menu">
+                            <a href="../use-cases/neoclouds.html" class="dropdown-item">NeoClouds</a>
+                            <a href="../use-cases/private-enterprise.html" class="dropdown-item">Private Enterprise</a>
+                            <a href="../use-cases/edge-computing.html" class="dropdown-item">Edge Computing</a>
+                            <a href="../use-cases/universities.html" class="dropdown-item">Universities</a>
+                            <a href="../use-cases/government.html" class="dropdown-item">Government</a>
+                        </div>
+                    </div>
+                    <a href="../pricing.html" class="nav-link">Pricing</a>
+                    <a href="../technology.html" class="nav-link">Technology</a>
+                    <a
+                        href="https://app.greenthread.ai/login"
+                        class="btn-secondary"
+                        >Login</a
+                    >
+                    <a href="mailto:sales@greenthread.ai" class="btn-primary"
+                        >Contact Sales</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero hero-about">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Inference <span class="italic">HA</span></h1>
+                    <p class="hero-subtitle">
+                        High availability that spans clouds and continents. Run model replicas across providers, failover instantly, and route requests to the optimal location for performance and compliance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Multi-Replica Failover Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">Instant failover, zero downtime</h2>
+                        <p class="feature-lead">
+                            Model replicas stand ready across your infrastructure. When one fails, others take over seamlessly.
+                        </p>
+                        <p class="feature-description">
+                            GreenThread maintains multiple replicas of your critical models, continuously health-checking each instance. When a GPU fails, a node goes down, or an entire region becomes unavailable, the inference router instantly redirects traffic to healthy replicas. Your users never notice—requests continue to be served without interruption.
+                        </p>
+                        <div class="feature-stats">
+                            <div class="feature-stat">
+                                <span class="stat-value">&lt;100ms</span>
+                                <span class="stat-label">Failover detection time</span>
+                            </div>
+                            <div class="feature-stat">
+                                <span class="stat-value">99.99%</span>
+                                <span class="stat-label">Achievable uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="ha-diagram">
+                            <div class="ha-nodes">
+                                <div class="ha-node active">
+                                    <div class="ha-node-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                            <rect x="9" y="9" width="6" height="6"></rect>
+                                        </svg>
+                                    </div>
+                                    <span class="ha-node-label">Primary</span>
+                                    <span class="ha-node-status">Active</span>
+                                </div>
+                                <div class="ha-node standby">
+                                    <div class="ha-node-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                            <rect x="9" y="9" width="6" height="6"></rect>
+                                        </svg>
+                                    </div>
+                                    <span class="ha-node-label">Replica 1</span>
+                                    <span class="ha-node-status">Standby</span>
+                                </div>
+                                <div class="ha-node standby">
+                                    <div class="ha-node-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                            <rect x="9" y="9" width="6" height="6"></rect>
+                                        </svg>
+                                    </div>
+                                    <span class="ha-node-label">Replica 2</span>
+                                    <span class="ha-node-status">Standby</span>
+                                </div>
+                            </div>
+                            <div class="ha-health">
+                                <span class="health-indicator pulse"></span>
+                                <span class="health-text">Continuous health monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Multi-Cloud Section -->
+        <section class="feature-section-dark">
+            <div class="container">
+                <div class="feature-content reverse">
+                    <div class="feature-text">
+                        <h2 class="section-title">Cloud-agnostic resilience</h2>
+                        <p class="feature-lead">
+                            Deploy across AWS, Azure, GCP, or on-premise. Survive any single provider outage.
+                        </p>
+                        <p class="feature-description">
+                            Run GreenThread engines across multiple cloud providers simultaneously. Our unified control plane treats all infrastructure as one logical fleet. When an entire cloud region—or an entire provider—experiences an outage, your inference workloads automatically shift to surviving infrastructure. No manual intervention required.
+                        </p>
+                        <ul class="feature-list dark">
+                            <li>Single pane of glass across all providers</li>
+                            <li>Automatic cross-cloud failover</li>
+                            <li>No vendor lock-in—move workloads freely</li>
+                            <li>Unified monitoring and observability</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="cloud-diagram">
+                            <div class="cloud-providers">
+                                <div class="cloud-provider">
+                                    <div class="provider-box">AWS</div>
+                                    <div class="provider-status online">Online</div>
+                                </div>
+                                <div class="cloud-provider">
+                                    <div class="provider-box">Azure</div>
+                                    <div class="provider-status online">Online</div>
+                                </div>
+                                <div class="cloud-provider">
+                                    <div class="provider-box warning">GCP</div>
+                                    <div class="provider-status offline">Outage</div>
+                                </div>
+                                <div class="cloud-provider">
+                                    <div class="provider-box">On-Prem</div>
+                                    <div class="provider-status online">Online</div>
+                                </div>
+                            </div>
+                            <div class="cloud-router">
+                                <span>GreenThread Router</span>
+                                <div class="router-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Locality Routing Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">Locality-aware routing</h2>
+                        <p class="feature-lead">
+                            Serve requests from the nearest region. Meet compliance requirements by keeping data where it needs to stay.
+                        </p>
+                        <p class="feature-description">
+                            GreenThread's inference router considers geographic locality when directing requests. Deploy model instances in specific regions to minimize latency for local users, or to satisfy regulatory requirements like GDPR that mandate data processing within certain jurisdictions. Configure routing rules that ensure EU requests are served by EU infrastructure—automatically.
+                        </p>
+                        <div class="locality-features">
+                            <div class="locality-feature">
+                                <div class="locality-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Geographic routing</h4>
+                                    <p>Route to nearest healthy replica for lowest latency</p>
+                                </div>
+                            </div>
+                            <div class="locality-feature">
+                                <div class="locality-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Compliance boundaries</h4>
+                                    <p>Enforce data residency with region-locked routing rules</p>
+                                </div>
+                            </div>
+                            <div class="locality-feature">
+                                <div class="locality-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Performance optimization</h4>
+                                    <p>Reduce round-trip latency by processing locally</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="region-map">
+                            <div class="region-row">
+                                <div class="region americas">
+                                    <span class="region-name">Americas</span>
+                                    <span class="region-latency">12ms</span>
+                                </div>
+                                <div class="region europe active">
+                                    <span class="region-name">Europe</span>
+                                    <span class="region-latency">8ms</span>
+                                    <span class="region-badge">GDPR</span>
+                                </div>
+                            </div>
+                            <div class="region-row">
+                                <div class="region asia">
+                                    <span class="region-name">Asia Pacific</span>
+                                    <span class="region-latency">15ms</span>
+                                </div>
+                                <div class="region australia">
+                                    <span class="region-name">Australia</span>
+                                    <span class="region-latency">18ms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="feature-benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Enterprise-grade reliability</h2>
+                    <p class="section-subtitle">Built for organizations that can't afford downtime</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Business continuity</h3>
+                        <p class="benefit-description">AI-powered features stay online even during infrastructure failures. Protect revenue and user experience with automatic failover.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Regulatory compliance</h3>
+                        <p class="benefit-description">Meet GDPR, data sovereignty, and industry-specific requirements with region-locked inference that keeps data where it belongs.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Global performance</h3>
+                        <p class="benefit-description">Users everywhere get fast responses. Locality routing ensures requests are served from the nearest available replica.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 16 12 12 8 16"></polyline>
+                                <line x1="12" y1="12" x2="12" y2="21"></line>
+                                <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Provider independence</h3>
+                        <p class="benefit-description">Never be locked into a single cloud. Deploy anywhere, migrate freely, and negotiate from a position of strength.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img
+                                src="../images/logo.png"
+                                alt="GreenThread"
+                                class="footer-logo-img"
+                            />
+                            <span class="footer-logo-text">GreenThread</span>
+                        </div>
+                        <p class="footer-description">
+                            Distributed AI inference at scale. Deploy anywhere,
+                            scale effortlessly.
+                        </p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Contact</h4>
+                        <a
+                            href="mailto:sales@greenthread.ai"
+                            class="footer-link"
+                            >Contact Sales</a
+                        >
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenThread. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../script.js"></script>
+    </body>
+</html>

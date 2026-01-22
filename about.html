@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About - GreenThread</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="gradient-base"></div>
+            <div class="blur-circle circle-1"></div>
+            <div class="blur-circle circle-2"></div>
+            <div class="blur-circle circle-3"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img
+                            src="./images/logo.png"
+                            alt="GreenThread"
+                            class="logo"
+                        />
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Features</a>
+                        <div class="dropdown-menu">
+                            <a href="features/model-multiplexing.html" class="dropdown-item">Model Multiplexing</a>
+                            <a href="features/hybrid-training.html" class="dropdown-item">Hybrid Training</a>
+                            <a href="features/inference-ha.html" class="dropdown-item">Inference HA</a>
+                            <a href="features/guardrails-compliance.html" class="dropdown-item">Guardrails & Compliance</a>
+                            <a href="features/instant-model-deployment.html" class="dropdown-item">Instant Model Deployment</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Use Cases</a>
+                        <div class="dropdown-menu">
+                            <a href="use-cases/neoclouds.html" class="dropdown-item">NeoClouds</a>
+                            <a href="use-cases/private-enterprise.html" class="dropdown-item">Private Enterprise</a>
+                            <a href="use-cases/edge-computing.html" class="dropdown-item">Edge Computing</a>
+                            <a href="use-cases/universities.html" class="dropdown-item">Universities</a>
+                            <a href="use-cases/government.html" class="dropdown-item">Government</a>
+                        </div>
+                    </div>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="technology.html" class="nav-link">Technology</a>
+                    <a
+                        href="https://app.greenthread.ai/login"
+                        class="btn-secondary"
+                        >Login</a
+                    >
+                    <a href="mailto:sales@greenthread.ai" class="btn-primary"
+                        >Contact Sales</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero hero-about">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        More for <span class="italic">less</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        At GreenThread, we believe exceptional AI infrastructure shouldn't come with an exceptional price tag. Our highly skilled team has built a platform that delivers enterprise-grade distributed inference at a fraction of the cost.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GPU Utilization Section -->
+        <section class="gpu-section">
+            <div class="container">
+                <div class="gpu-content">
+                    <div class="gpu-text">
+                        <h2 class="section-title">The GPU utilization problem</h2>
+                        <p class="gpu-lead">
+                            Most GPUs in production environments sit idle 70-80% of the time. That's millions of dollars in hardware doing nothing.
+                        </p>
+                        <p class="gpu-description">
+                            Traditional inference deployments dedicate entire GPUs to single models, regardless of actual demand. During off-peak hours, between requests, or when running smaller models—expensive hardware sits waiting. It's an inefficiency the industry has simply accepted.
+                        </p>
+                    </div>
+                    <div class="gpu-stats">
+                        <div class="gpu-stat">
+                            <span class="gpu-stat-number">70-80%</span>
+                            <span class="gpu-stat-label">Average GPU idle time in traditional deployments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="solution-section">
+            <div class="container">
+                <div class="solution-content">
+                    <div class="solution-header">
+                        <h2 class="section-title">Run more. Pay less. Compromise nothing.</h2>
+                        <p class="section-subtitle">
+                            GreenThread's distributed inference engine transforms how GPUs are utilized
+                        </p>
+                    </div>
+                    <div class="solution-grid">
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                    <rect x="9" y="9" width="6" height="6"></rect>
+                                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                                    <line x1="20" y1="14" x2="23" y2="14"></line>
+                                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                                    <line x1="1" y1="14" x2="4" y2="14"></line>
+                                </svg>
+                            </div>
+                            <h3 class="solution-title">Multi-model GPU sharing</h3>
+                            <p class="solution-description">
+                                Run multiple AI models simultaneously on the same GPU hardware. Our intelligent scheduling ensures optimal resource allocation without bottlenecks or interference between workloads.
+                            </p>
+                        </div>
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="solution-title">Zero capability compromise</h3>
+                            <p class="solution-description">
+                                Sharing doesn't mean sacrificing. Each model runs with full access to the compute it needs, when it needs it. Latency targets are met. Throughput is maintained. Quality never drops.
+                            </p>
+                        </div>
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                                </svg>
+                            </div>
+                            <h3 class="solution-title">Distributed intelligence</h3>
+                            <p class="solution-description">
+                                Our engine spans across your entire GPU fleet—cloud, on-prem, or hybrid. Work is automatically distributed to where capacity exists, maximizing utilization across every available resource.
+                            </p>
+                        </div>
+                        <div class="solution-card">
+                            <div class="solution-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <h3 class="solution-title">Dramatic cost reduction</h3>
+                            <p class="solution-description">
+                                When you use 90% of your GPU instead of 20%, the economics change entirely. Our customers typically see 3-5x better cost efficiency compared to traditional single-model deployments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Meet the Team</h2>
+                    <p class="section-subtitle">The people making distributed AI accessible to everyone</p>
+                </div>
+                <!-- Executive -->
+                <div class="team-group">
+                    <h3 class="team-group-title">Executive</h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="team-photo-wrapper">
+                                <img src="./images/team/karl-kloppenborg.jpg" alt="Karl Kloppenborg" class="team-photo" />
+                                <div class="team-overlay">
+                                    <p class="team-quote">"What I love about GreenThread goes here."</p>
+                                </div>
+                            </div>
+                            <h3 class="team-name">Karl Kloppenborg</h3>
+                            <p class="team-title">CEO</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-photo-wrapper">
+                                <img src="./images/team/luke-iggleden.jpg" alt="Luke Iggleden" class="team-photo" />
+                                <div class="team-overlay">
+                                    <p class="team-quote">"What I love about GreenThread goes here."</p>
+                                </div>
+                            </div>
+                            <h3 class="team-name">Luke Iggleden</h3>
+                            <p class="team-title">COO</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-photo-wrapper">
+                                <img src="./images/team/nick-glynn.jpg" alt="Nick Glynn" class="team-photo" />
+                                <div class="team-overlay">
+                                    <p class="team-quote">"What I love about GreenThread goes here."</p>
+                                </div>
+                            </div>
+                            <h3 class="team-name">Nick Glynn</h3>
+                            <p class="team-title">CTPO</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales and Marketing -->
+                <div class="team-group">
+                    <h3 class="team-group-title">Sales and Marketing</h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="team-photo-wrapper">
+                                <img src="./images/team/bruce-bennie.jpg" alt="Bruce Bennie" class="team-photo" />
+                                <div class="team-overlay">
+                                    <p class="team-quote">"What I love about GreenThread goes here."</p>
+                                </div>
+                            </div>
+                            <h3 class="team-name">Bruce Bennie</h3>
+                            <p class="team-title">Head of Sales</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-photo-wrapper">
+                                <img src="./images/team/gerardo-deangelo.jpg" alt="Gerardo DeAngelo" class="team-photo" />
+                                <div class="team-overlay">
+                                    <p class="team-quote">"What I love about GreenThread goes here."</p>
+                                </div>
+                            </div>
+                            <h3 class="team-name">Gerardo DeAngelo</h3>
+                            <p class="team-title">Channel and Partnerships</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-photo-wrapper">
+                                <img src="./images/team/stuart-buxton.jpg" alt="Stuart Buxton" class="team-photo" />
+                                <div class="team-overlay">
+                                    <p class="team-quote">"What I love about GreenThread goes here."</p>
+                                </div>
+                            </div>
+                            <h3 class="team-name">Stuart Buxton</h3>
+                            <p class="team-title">Marketing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering -->
+                <div class="team-group">
+                    <h3 class="team-group-title">Engineering</h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="team-photo-wrapper">
+                                <img src="./images/team/nick-pratley.jpg" alt="Nick Pratley" class="team-photo" />
+                                <div class="team-overlay">
+                                    <p class="team-quote">"What I love about GreenThread goes here."</p>
+                                </div>
+                            </div>
+                            <h3 class="team-name">Nick Pratley</h3>
+                            <p class="team-title">Engineering</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-photo-wrapper">
+                                <img src="./images/team/tim-millard.jpg" alt="Tim Millard" class="team-photo" />
+                                <div class="team-overlay">
+                                    <p class="team-quote">"What I love about GreenThread goes here."</p>
+                                </div>
+                            </div>
+                            <h3 class="team-name">Tim Millard</h3>
+                            <p class="team-title">Engineering</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="team-group">
+                    <h3 class="team-group-title">Security</h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="team-photo-wrapper">
+                                <img src="./images/team/shane-tully.jpg" alt="Shane Tully" class="team-photo" />
+                                <div class="team-overlay">
+                                    <p class="team-quote">"What I love about GreenThread goes here."</p>
+                                </div>
+                            </div>
+                            <h3 class="team-name">Shane Tully</h3>
+                            <p class="team-title">CISO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section class="security-section">
+            <div class="container">
+                <div class="security-content">
+                    <div class="security-header">
+                        <h2 class="section-title">Built in Australia to the highest security standards</h2>
+                        <p class="section-subtitle">
+                            Enterprise-grade security isn't optional—it's foundational. GreenThread is built from the ground up to meet the most demanding compliance requirements.
+                        </p>
+                    </div>
+                    <div class="compliance-grid">
+                        <div class="compliance-card">
+                            <div class="compliance-content">
+                                <div class="compliance-badge">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="compliance-title">ISO 27001:2022</h3>
+                                <p class="compliance-description">Information security management systems</p>
+                            </div>
+                            <div class="compliance-overlay">
+                                <p class="compliance-explanation">The international standard for managing information security. Demonstrates systematic protection of sensitive data through risk assessment, security controls, and continuous improvement processes.</p>
+                            </div>
+                        </div>
+                        <div class="compliance-card">
+                            <div class="compliance-content">
+                                <div class="compliance-badge">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="compliance-title">ISO 42001:2023</h3>
+                                <p class="compliance-description">AI management systems</p>
+                            </div>
+                            <div class="compliance-overlay">
+                                <p class="compliance-explanation">The world's first international standard for AI management systems. Ensures responsible development and deployment of AI with robust governance, risk management, and ethical considerations built in.</p>
+                            </div>
+                        </div>
+                        <div class="compliance-card">
+                            <div class="compliance-content">
+                                <div class="compliance-badge">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="compliance-title">SOC 1 Type 2</h3>
+                                <p class="compliance-description">Financial reporting controls</p>
+                            </div>
+                            <div class="compliance-overlay">
+                                <p class="compliance-explanation">Validates that our controls over financial reporting are properly designed and operating effectively over time. Essential for customers whose financial statements depend on our services.</p>
+                            </div>
+                        </div>
+                        <div class="compliance-card">
+                            <div class="compliance-content">
+                                <div class="compliance-badge">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="compliance-title">SOC 2 Type 2</h3>
+                                <p class="compliance-description">Security, availability & confidentiality</p>
+                            </div>
+                            <div class="compliance-overlay">
+                                <p class="compliance-explanation">Independent verification that our security, availability, processing integrity, confidentiality, and privacy controls are effectively implemented and maintained over an extended audit period.</p>
+                            </div>
+                        </div>
+                        <div class="compliance-card">
+                            <div class="compliance-content">
+                                <div class="compliance-badge">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="compliance-title">HITRUST</h3>
+                                <p class="compliance-description">Healthcare information security</p>
+                            </div>
+                            <div class="compliance-overlay">
+                                <p class="compliance-explanation">The gold standard for healthcare data protection. Combines requirements from HIPAA, NIST, and ISO to ensure comprehensive safeguards for protected health information (PHI) and sensitive medical data.</p>
+                            </div>
+                        </div>
+                        <div class="compliance-card">
+                            <div class="compliance-content">
+                                <div class="compliance-badge">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="compliance-title">PCI-DSS 4.0</h3>
+                                <p class="compliance-description">Payment card data security</p>
+                            </div>
+                            <div class="compliance-overlay">
+                                <p class="compliance-explanation">The latest payment card industry security standard. Ensures rigorous protection of cardholder data through encryption, access controls, and continuous security monitoring across all payment processing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Backed By Section -->
+        <section class="backed-section">
+            <div class="container">
+                <div class="backed-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Backed by Australia's Best</h2>
+                        <p class="section-subtitle">Supported by three of Australia's top Venture Capital firms</p>
+                    </div>
+                    <div class="backed-logos">
+                        <div class="backed-logo">
+                            <img src="./images/investors/antler.png" alt="Antler Capital" />
+                            <span class="backed-name">Antler Capital</span>
+                        </div>
+                        <div class="backed-logo">
+                            <img src="./images/investors/blacknova.png" alt="Black Nova Capital" />
+                            <span class="backed-name">Black Nova Capital</span>
+                        </div>
+                        <div class="backed-logo">
+                            <img src="./images/investors/archangel.png" alt="ArchAngel Ventures" />
+                            <span class="backed-name">ArchAngel Ventures</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img
+                                src="./images/logo.png"
+                                alt="GreenThread"
+                                class="footer-logo-img"
+                            />
+                            <span class="footer-logo-text">GreenThread</span>
+                        </div>
+                        <p class="footer-description">
+                            Distributed AI inference at scale. Deploy anywhere,
+                            scale effortlessly.
+                        </p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Contact</h4>
+                        <a
+                            href="mailto:sales@greenthread.ai"
+                            class="footer-link"
+                            >Contact Sales</a
+                        >
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenThread. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
