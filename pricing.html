@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pricing - GreenThread</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="gradient-base"></div>
+            <div class="blur-circle circle-1"></div>
+            <div class="blur-circle circle-2"></div>
+            <div class="blur-circle circle-3"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img
+                            src="./images/logo.png"
+                            alt="GreenThread"
+                            class="logo"
+                        />
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Features</a>
+                        <div class="dropdown-menu">
+                            <a href="features/model-multiplexing.html" class="dropdown-item">Model Multiplexing</a>
+                            <a href="features/hybrid-training.html" class="dropdown-item">Hybrid Training</a>
+                            <a href="features/inference-ha.html" class="dropdown-item">Inference HA</a>
+                            <a href="features/guardrails-compliance.html" class="dropdown-item">Guardrails & Compliance</a>
+                            <a href="features/instant-model-deployment.html" class="dropdown-item">Instant Model Deployment</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Use Cases</a>
+                        <div class="dropdown-menu">
+                            <a href="use-cases/neoclouds.html" class="dropdown-item">NeoClouds</a>
+                            <a href="use-cases/private-enterprise.html" class="dropdown-item">Private Enterprise</a>
+                            <a href="use-cases/edge-computing.html" class="dropdown-item">Edge Computing</a>
+                            <a href="use-cases/universities.html" class="dropdown-item">Universities</a>
+                            <a href="use-cases/government.html" class="dropdown-item">Government</a>
+                        </div>
+                    </div>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="technology.html" class="nav-link">Technology</a>
+                    <a href="mailto:sales@greenthread.ai" class="btn-primary"
+                        >Contact Sales</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero hero-about">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Simple, <span class="italic">transparent</span> pricing
+                    </h1>
+                    <p class="hero-subtitle">
+                        Pay for VRAM capacity, not complexity. Volume discounts built in. No hidden fees.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Model Section -->
+        <section class="pricing-model-section">
+            <div class="container">
+                <div class="pricing-model-content">
+                    <div class="pricing-model-info">
+                        <h2 class="section-title">Capacity-based licensing</h2>
+                        <p class="pricing-model-description">
+                            GreenThread is licensed based on the total VRAM capacity you need. Start at <strong>$17.70 AUD per GB per month</strong>, with automatic volume discounts as you scale.
+                        </p>
+                        <div class="pricing-highlights">
+                            <div class="pricing-highlight">
+                                <div class="highlight-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                        <polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="highlight-title">Volume discounts</h4>
+                                    <p class="highlight-description">Price drops $0.30 per GB for every 300GB, down to $15.00/GB floor</p>
+                                </div>
+                            </div>
+                            <div class="pricing-highlight">
+                                <div class="highlight-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="highlight-title">Annual savings</h4>
+                                    <p class="highlight-description">Pay for 10 months, get 12 with annual commitment</p>
+                                </div>
+                            </div>
+                            <div class="pricing-highlight">
+                                <div class="highlight-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="highlight-title">All-inclusive</h4>
+                                    <p class="highlight-description">No setup fees, no support tiers, no hidden charges</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="calculator-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Pricing Calculator</h2>
+                    <p class="section-subtitle">Configure your GPU setup and see your price instantly</p>
+                </div>
+                <div class="calculator-container">
+                    <div class="calculator-inputs">
+                        <div class="calculator-field">
+                            <label for="gpu-type">GPU Type</label>
+                            <select id="gpu-type">
+                                <option value="80">NVIDIA H100 (80GB)</option>
+                                <option value="192">NVIDIA B200 (192GB)</option>
+                                <option value="96">NVIDIA H200 (96GB)</option>
+                                <option value="48">NVIDIA A100 (48GB)</option>
+                                <option value="80">NVIDIA A100 (80GB)</option>
+                                <option value="24">NVIDIA A10 (24GB)</option>
+                                <option value="48">NVIDIA L40S (48GB)</option>
+                            </select>
+                        </div>
+                        <div class="calculator-field">
+                            <label for="gpu-count">Number of GPUs</label>
+                            <input type="number" id="gpu-count" value="8" min="1" max="1000" />
+                        </div>
+                        <div class="calculator-field">
+                            <label for="billing-period">Billing Period</label>
+                            <select id="billing-period">
+                                <option value="monthly">Monthly</option>
+                                <option value="annual">Annual (2 months free)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="calculator-results">
+                        <div class="result-breakdown">
+                            <div class="result-row">
+                                <span class="result-label">Total VRAM</span>
+                                <span class="result-value" id="total-vram">640 GB</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Price per GB</span>
+                                <span class="result-value" id="price-per-gb">$17.10</span>
+                            </div>
+                            <div class="result-row discount-row" id="discount-row">
+                                <span class="result-label">Volume discount</span>
+                                <span class="result-value discount" id="discount-amount">-$0.60/GB</span>
+                            </div>
+                        </div>
+                        <div class="result-total">
+                            <div class="total-price">
+                                <span class="total-label" id="total-label">Monthly Price</span>
+                                <span class="total-value" id="total-price">$10,944</span>
+                                <span class="total-currency">AUD</span>
+                            </div>
+                            <p class="total-note" id="total-note">Billed monthly</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Example Configurations -->
+        <section class="examples-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Example Configurations</h2>
+                    <p class="section-subtitle">Common setups and their pricing</p>
+                </div>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h3 class="example-title">Single H100</h3>
+                            <span class="example-badge">Starter</span>
+                        </div>
+                        <div class="example-specs">
+                            <div class="spec-row">
+                                <span>GPUs</span>
+                                <span>1x NVIDIA H100</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>VRAM</span>
+                                <span>80 GB</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>Price/GB</span>
+                                <span>$17.70</span>
+                            </div>
+                        </div>
+                        <div class="example-pricing">
+                            <div class="example-price">
+                                <span class="price-amount">$1,416</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                            <p class="example-annual">$14,160/year with annual billing</p>
+                        </div>
+                    </div>
+                    <div class="example-card featured">
+                        <div class="example-header">
+                            <h3 class="example-title">8x B200 Node</h3>
+                            <span class="example-badge">Popular</span>
+                        </div>
+                        <div class="example-specs">
+                            <div class="spec-row">
+                                <span>GPUs</span>
+                                <span>8x NVIDIA B200</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>VRAM</span>
+                                <span>1,536 GB</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>Price/GB</span>
+                                <span>$16.20</span>
+                            </div>
+                        </div>
+                        <div class="example-pricing">
+                            <div class="example-price">
+                                <span class="price-amount">$24,883</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                            <p class="example-annual">$248,832/year with annual billing</p>
+                        </div>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h3 class="example-title">4x 8x B200 Cluster</h3>
+                            <span class="example-badge">Enterprise</span>
+                        </div>
+                        <div class="example-specs">
+                            <div class="spec-row">
+                                <span>GPUs</span>
+                                <span>32x NVIDIA B200</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>VRAM</span>
+                                <span>6,144 GB</span>
+                            </div>
+                            <div class="spec-row">
+                                <span>Price/GB</span>
+                                <span>$15.00</span>
+                            </div>
+                        </div>
+                        <div class="example-pricing">
+                            <div class="example-price">
+                                <span class="price-amount">$92,160</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                            <p class="example-annual">$921,600/year with annual billing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volume Discounts Table -->
+        <section class="tiers-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Volume Discount Tiers</h2>
+                    <p class="section-subtitle">The more capacity you need, the less you pay per GB</p>
+                </div>
+                <div class="tiers-table-wrapper">
+                    <table class="tiers-table">
+                        <thead>
+                            <tr>
+                                <th>VRAM Capacity</th>
+                                <th>Price per GB/month</th>
+                                <th>Discount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0 - 299 GB</td>
+                                <td>$17.70</td>
+                                <td>Base price</td>
+                            </tr>
+                            <tr>
+                                <td>300 - 599 GB</td>
+                                <td>$17.40</td>
+                                <td>-$0.30</td>
+                            </tr>
+                            <tr>
+                                <td>600 - 899 GB</td>
+                                <td>$17.10</td>
+                                <td>-$0.60</td>
+                            </tr>
+                            <tr>
+                                <td>900 - 1,199 GB</td>
+                                <td>$16.80</td>
+                                <td>-$0.90</td>
+                            </tr>
+                            <tr>
+                                <td>1,200 - 1,499 GB</td>
+                                <td>$16.50</td>
+                                <td>-$1.20</td>
+                            </tr>
+                            <tr>
+                                <td>1,500 - 1,799 GB</td>
+                                <td>$16.20</td>
+                                <td>-$1.50</td>
+                            </tr>
+                            <tr>
+                                <td>1,800 - 2,099 GB</td>
+                                <td>$15.90</td>
+                                <td>-$1.80</td>
+                            </tr>
+                            <tr>
+                                <td>2,100 - 2,399 GB</td>
+                                <td>$15.60</td>
+                                <td>-$2.10</td>
+                            </tr>
+                            <tr>
+                                <td>2,400 - 2,699 GB</td>
+                                <td>$15.30</td>
+                                <td>-$2.40</td>
+                            </tr>
+                            <tr class="floor-row">
+                                <td>2,700+ GB</td>
+                                <td>$15.00</td>
+                                <td>Floor price</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to get started?</h2>
+                    <p class="cta-subtitle">
+                        Contact our sales team for a custom quote or to discuss your specific requirements.
+                    </p>
+                    <a href="mailto:sales@greenthread.ai" class="btn-primary btn-lg">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img
+                                src="./images/logo.png"
+                                alt="GreenThread"
+                                class="footer-logo-img"
+                            />
+                        </div>
+                        <p class="footer-description">
+                            Distributed AI inference at scale. Deploy anywhere,
+                            scale effortlessly.
+                        </p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Contact</h4>
+                        <a
+                            href="mailto:sales@greenthread.ai"
+                            class="footer-link"
+                            >Contact Sales</a
+                        >
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenThread. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="pricing.js"></script>
+    </body>
+</html>

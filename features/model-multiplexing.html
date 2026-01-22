@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Model Multiplexing - GreenThread</title>
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+    <body>
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="gradient-base"></div>
+            <div class="blur-circle circle-1"></div>
+            <div class="blur-circle circle-2"></div>
+            <div class="blur-circle circle-3"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <img
+                            src="../images/logo.png"
+                            alt="GreenThread"
+                            class="logo"
+                        />
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="../about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Features</a>
+                        <div class="dropdown-menu">
+                            <a href="model-multiplexing.html" class="dropdown-item">Model Multiplexing</a>
+                            <a href="hybrid-training.html" class="dropdown-item">Hybrid Training</a>
+                            <a href="inference-ha.html" class="dropdown-item">Inference HA</a>
+                            <a href="guardrails-compliance.html" class="dropdown-item">Guardrails & Compliance</a>
+                            <a href="instant-model-deployment.html" class="dropdown-item">Instant Model Deployment</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Use Cases</a>
+                        <div class="dropdown-menu">
+                            <a href="../use-cases/neoclouds.html" class="dropdown-item">NeoClouds</a>
+                            <a href="../use-cases/private-enterprise.html" class="dropdown-item">Private Enterprise</a>
+                            <a href="../use-cases/edge-computing.html" class="dropdown-item">Edge Computing</a>
+                            <a href="../use-cases/universities.html" class="dropdown-item">Universities</a>
+                            <a href="../use-cases/government.html" class="dropdown-item">Government</a>
+                        </div>
+                    </div>
+                    <a href="../pricing.html" class="nav-link">Pricing</a>
+                    <a href="../technology.html" class="nav-link">Technology</a>
+                    <a href="mailto:sales@greenthread.ai" class="btn-primary"
+                        >Contact Sales</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero hero-about">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Model <span class="italic">Multiplexing</span></h1>
+                    <p class="hero-subtitle">
+                        At the core of GreenThread's inference engine lies Model Multiplexing—the ability to dynamically context switch between AI models on the same GPU hardware with subsecond performance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inference Router Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">Intelligent inference routing</h2>
+                        <p class="feature-lead">
+                            Every inference request flows through our distributed routing layer, which makes real-time decisions about where and how to execute each request.
+                        </p>
+                        <p class="feature-description">
+                            The inference router doesn't just load balance—it understands model requirements, current GPU memory state, request priorities, and queue depths across your entire fleet. When a request arrives, the router identifies the optimal execution path in microseconds, whether that means using an already-loaded model, triggering a context switch, or routing to a different node entirely.
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="feature-diagram">
+                            <div class="diagram-flow">
+                                <div class="diagram-node">
+                                    <span class="diagram-label">Requests</span>
+                                </div>
+                                <div class="diagram-arrow"></div>
+                                <div class="diagram-node highlight">
+                                    <span class="diagram-label">Inference Router</span>
+                                </div>
+                                <div class="diagram-arrow"></div>
+                                <div class="diagram-node">
+                                    <span class="diagram-label">GPU Fleet</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Context Switching Section -->
+        <section class="feature-section-dark">
+            <div class="container">
+                <div class="feature-content reverse">
+                    <div class="feature-text">
+                        <h2 class="section-title">Subsecond context switching</h2>
+                        <p class="feature-lead">
+                            Traditional model loading takes minutes. GreenThread does it in milliseconds.
+                        </p>
+                        <p class="feature-description">
+                            When demand shifts between models, our engine performs context switches that move models in and out of GPU memory with remarkable speed. This isn't cold loading from disk—it's intelligent memory management that keeps your most-used models warm and ready while efficiently swapping less active models as needed.
+                        </p>
+                        <div class="feature-stats">
+                            <div class="feature-stat">
+                                <span class="stat-value">&lt;500ms</span>
+                                <span class="stat-label">Typical context switch time</span>
+                            </div>
+                            <div class="feature-stat">
+                                <span class="stat-value">Zero</span>
+                                <span class="stat-label">Dropped requests during switches</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="context-switch-visual">
+                            <div class="gpu-memory">
+                                <div class="memory-label">GPU Memory</div>
+                                <div class="memory-slots">
+                                    <div class="memory-slot active">Model A</div>
+                                    <div class="memory-slot switching">Model B</div>
+                                    <div class="memory-slot">Model C</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Model Filesystem Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">The GreenThread Model Filesystem</h2>
+                        <p class="feature-lead">
+                            Purpose-built storage that treats AI models as first-class citizens.
+                        </p>
+                        <p class="feature-description">
+                            Our model filesystem is engineered specifically for the unique access patterns of AI inference. Models are chunked, indexed, and distributed across high-speed storage tiers, enabling the subsecond load times that make true multiplexing possible. The filesystem maintains model state, handles versioning, and ensures consistency across distributed deployments.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Optimized for large sequential reads typical of model loading</li>
+                            <li>Intelligent caching across memory, NVMe, and distributed storage</li>
+                            <li>Automatic model sharding for multi-GPU deployments</li>
+                            <li>Built-in versioning and rollback capabilities</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="filesystem-visual">
+                            <div class="fs-layer">
+                                <span class="fs-label">GPU VRAM</span>
+                                <span class="fs-speed">Fastest</span>
+                            </div>
+                            <div class="fs-layer">
+                                <span class="fs-label">System Memory</span>
+                                <span class="fs-speed">Fast</span>
+                            </div>
+                            <div class="fs-layer">
+                                <span class="fs-label">NVMe Cache</span>
+                                <span class="fs-speed">Quick</span>
+                            </div>
+                            <div class="fs-layer">
+                                <span class="fs-label">Distributed Storage</span>
+                                <span class="fs-speed">Scalable</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="feature-benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Model Multiplexing matters</h2>
+                    <p class="section-subtitle">Transform GPU economics without sacrificing performance</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Reduce infrastructure costs</h3>
+                        <p class="benefit-description">Run multiple models on fewer GPUs. Stop paying for idle compute while models wait for requests.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Maintain low latency</h3>
+                        <p class="benefit-description">Subsecond switching means users never notice when models are being multiplexed behind the scenes.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Scale effortlessly</h3>
+                        <p class="benefit-description">Add new models without provisioning new hardware. Your existing fleet automatically accommodates growth.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Simplify operations</h3>
+                        <p class="benefit-description">One platform manages all your models. No more juggling separate deployments for each model variant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img
+                                src="../images/logo.png"
+                                alt="GreenThread"
+                                class="footer-logo-img"
+                            />
+                        </div>
+                        <p class="footer-description">
+                            Distributed AI inference at scale. Deploy anywhere,
+                            scale effortlessly.
+                        </p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Contact</h4>
+                        <a
+                            href="mailto:sales@greenthread.ai"
+                            class="footer-link"
+                            >Contact Sales</a
+                        >
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenThread. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../script.js"></script>
+    </body>
+</html>

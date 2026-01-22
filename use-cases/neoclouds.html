@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NeoClouds - GreenThread</title>
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+    <body>
+        <!-- Animated Background -->
+        <div class="animated-background">
+            <div class="gradient-base"></div>
+            <div class="blur-circle circle-1"></div>
+            <div class="blur-circle circle-2"></div>
+            <div class="blur-circle circle-3"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <img
+                            src="../images/logo.png"
+                            alt="GreenThread"
+                            class="logo"
+                        />
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="../about.html" class="nav-link">About</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Features</a>
+                        <div class="dropdown-menu">
+                            <a href="../features/model-multiplexing.html" class="dropdown-item">Model Multiplexing</a>
+                            <a href="../features/hybrid-training.html" class="dropdown-item">Hybrid Training</a>
+                            <a href="../features/inference-ha.html" class="dropdown-item">Inference HA</a>
+                            <a href="../features/guardrails-compliance.html" class="dropdown-item">Guardrails & Compliance</a>
+                            <a href="../features/instant-model-deployment.html" class="dropdown-item">Instant Model Deployment</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-trigger">Use Cases</a>
+                        <div class="dropdown-menu">
+                            <a href="neoclouds.html" class="dropdown-item">NeoClouds</a>
+                            <a href="private-enterprise.html" class="dropdown-item">Private Enterprise</a>
+                            <a href="edge-computing.html" class="dropdown-item">Edge Computing</a>
+                            <a href="universities.html" class="dropdown-item">Universities</a>
+                            <a href="government.html" class="dropdown-item">Government</a>
+                        </div>
+                    </div>
+                    <a href="../pricing.html" class="nav-link">Pricing</a>
+                    <a href="../technology.html" class="nav-link">Technology</a>
+                    <a href="mailto:sales@greenthread.ai" class="btn-primary"
+                        >Contact Sales</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <section class="hero hero-about">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Built for NeoClouds</h1>
+                    <p class="hero-subtitle">
+                        Your customers don't want GPUs. They want AI inference.
+                        Turn your idle compute into a world-class inference platform
+                        that rivals the hyperscalers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Monetize Idle Capacity Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">Monetize every GPU hour</h2>
+                        <p class="feature-lead">
+                            Your GPUs are sitting idle. GreenThread turns them into revenue.
+                        </p>
+                        <p class="feature-description">
+                            Most NeoCloud GPU fleets run at 30-40% utilization. That's not a capacity problem—it's an opportunity. GreenThread lets you offer shared inference services on your existing hardware, generating revenue from capacity that would otherwise go unused.
+                        </p>
+                        <div class="usecase-stats">
+                            <div class="usecase-stat">
+                                <span class="usecase-stat-value">60%</span>
+                                <span class="usecase-stat-label">of GPU capacity typically sits idle</span>
+                            </div>
+                            <div class="usecase-stat">
+                                <span class="usecase-stat-value">3x</span>
+                                <span class="usecase-stat-label">revenue potential from same hardware</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="capacity-visual">
+                            <div class="capacity-comparison">
+                                <div class="capacity-card">
+                                    <div class="capacity-header">Without GreenThread</div>
+                                    <div class="capacity-bar-container">
+                                        <div class="capacity-bar">
+                                            <div class="capacity-fill dedicated" style="width: 35%"></div>
+                                        </div>
+                                        <div class="capacity-labels">
+                                            <span>Dedicated workloads</span>
+                                            <span>35%</span>
+                                        </div>
+                                    </div>
+                                    <div class="capacity-bar-container">
+                                        <div class="capacity-bar">
+                                            <div class="capacity-fill idle" style="width: 65%"></div>
+                                        </div>
+                                        <div class="capacity-labels">
+                                            <span>Idle capacity</span>
+                                            <span>65%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="capacity-card highlight">
+                                    <div class="capacity-header">With GreenThread</div>
+                                    <div class="capacity-bar-container">
+                                        <div class="capacity-bar">
+                                            <div class="capacity-fill dedicated" style="width: 35%"></div>
+                                        </div>
+                                        <div class="capacity-labels">
+                                            <span>Dedicated workloads</span>
+                                            <span>35%</span>
+                                        </div>
+                                    </div>
+                                    <div class="capacity-bar-container">
+                                        <div class="capacity-bar">
+                                            <div class="capacity-fill shared" style="width: 50%"></div>
+                                        </div>
+                                        <div class="capacity-labels">
+                                            <span>Shared inference</span>
+                                            <span>50%</span>
+                                        </div>
+                                    </div>
+                                    <div class="capacity-bar-container">
+                                        <div class="capacity-bar">
+                                            <div class="capacity-fill reserve" style="width: 15%"></div>
+                                        </div>
+                                        <div class="capacity-labels">
+                                            <span>Burst reserve</span>
+                                            <span>15%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sell Inference Not GPUs Section -->
+        <section class="feature-section-dark">
+            <div class="container">
+                <div class="feature-content reverse">
+                    <div class="feature-text">
+                        <h2 class="section-title">Sell inference, not GPUs</h2>
+                        <p class="feature-lead">
+                            Your customers want AI results. Give them what they actually need.
+                        </p>
+                        <p class="feature-description">
+                            Most businesses don't have ML engineers. They don't want to manage infrastructure, optimize models, or worry about GPU memory. They just want to call an API and get intelligent responses. GreenThread lets you offer inference-as-a-service while your customers focus on building products.
+                        </p>
+                        <div class="value-shift">
+                            <div class="shift-item old">
+                                <div class="shift-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                                        <rect x="9" y="9" width="6" height="6"/>
+                                        <line x1="9" y1="1" x2="9" y2="4"/>
+                                        <line x1="15" y1="1" x2="15" y2="4"/>
+                                        <line x1="9" y1="20" x2="9" y2="23"/>
+                                        <line x1="15" y1="20" x2="15" y2="23"/>
+                                    </svg>
+                                </div>
+                                <div class="shift-content">
+                                    <span class="shift-label">Old model</span>
+                                    <span class="shift-value">"Rent this GPU"</span>
+                                </div>
+                            </div>
+                            <div class="shift-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                    <polyline points="12 5 19 12 12 19"/>
+                                </svg>
+                            </div>
+                            <div class="shift-item new">
+                                <div class="shift-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="shift-content">
+                                    <span class="shift-label">New model</span>
+                                    <span class="shift-value">"Use this AI"</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="api-visual">
+                            <div class="api-example">
+                                <div class="api-header">
+                                    <span class="api-method">POST</span>
+                                    <span class="api-endpoint">/v1/inference/llama-3-70b</span>
+                                </div>
+                                <div class="api-response">
+                                    <div class="response-line">
+                                        <span class="response-key">"tokens":</span>
+                                        <span class="response-value">247</span>
+                                    </div>
+                                    <div class="response-line">
+                                        <span class="response-key">"latency_ms":</span>
+                                        <span class="response-value">89</span>
+                                    </div>
+                                    <div class="response-line">
+                                        <span class="response-key">"cost":</span>
+                                        <span class="response-value">"$0.0003"</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="api-benefit">
+                                <span>Your customers get AI. You get revenue. No complexity.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Massive Model Catalog Section -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2 class="section-title">Hundreds of models, not a handful</h2>
+                        <p class="feature-lead">
+                            Why limit your catalog? Model multiplexing changes everything.
+                        </p>
+                        <p class="feature-description">
+                            Traditional inference platforms dedicate GPUs to individual models—so offering 10 models means 10x the infrastructure cost. GreenThread's model multiplexing lets you serve hundreds of models from the same GPU fleet. Context-switch between models in milliseconds, and only load what's actually being used.
+                        </p>
+                        <div class="catalog-comparison">
+                            <div class="catalog-item traditional">
+                                <div class="catalog-count">8</div>
+                                <div class="catalog-label">Traditional: 8 GPUs = 8 models</div>
+                            </div>
+                            <div class="catalog-vs">vs</div>
+                            <div class="catalog-item greenthread">
+                                <div class="catalog-count">200+</div>
+                                <div class="catalog-label">GreenThread: 8 GPUs = 200+ models</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="model-grid-visual">
+                            <div class="model-grid-header">Your Model Catalog</div>
+                            <div class="model-grid">
+                                <div class="model-chip active">Llama 3 70B</div>
+                                <div class="model-chip">Mistral Large</div>
+                                <div class="model-chip">CodeLlama 34B</div>
+                                <div class="model-chip">Mixtral 8x7B</div>
+                                <div class="model-chip active">Qwen 72B</div>
+                                <div class="model-chip">DeepSeek Coder</div>
+                                <div class="model-chip">Phi-3 Medium</div>
+                                <div class="model-chip">Gemma 2 27B</div>
+                                <div class="model-chip">DBRX</div>
+                                <div class="model-chip active">Command R+</div>
+                                <div class="model-chip">Falcon 180B</div>
+                                <div class="model-chip">Yi 34B</div>
+                                <div class="model-chip more">+188 more</div>
+                            </div>
+                            <div class="model-grid-footer">
+                                <div class="grid-stat">
+                                    <span class="grid-stat-value">3</span>
+                                    <span class="grid-stat-label">Currently active</span>
+                                </div>
+                                <div class="grid-stat">
+                                    <span class="grid-stat-value">&lt;100ms</span>
+                                    <span class="grid-stat-label">Switch time</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competitive Advantage Section -->
+        <section class="feature-benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Compete with the hyperscalers</h2>
+                    <p class="section-subtitle">Differentiate on model availability, not just price</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">New revenue stream</h3>
+                        <p class="benefit-description">
+                            Generate income from GPU capacity that's currently producing nothing. Shared inference revenue supplements dedicated compute sales.
+                        </p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Massive model selection</h3>
+                        <p class="benefit-description">
+                            Offer more models than AWS Bedrock or Azure AI. Model multiplexing means your catalog scales without infrastructure cost.
+                        </p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Instant model deployment</h3>
+                        <p class="benefit-description">
+                            Add new models to your catalog in minutes, not weeks. Respond to customer requests and market trends immediately.
+                        </p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Enterprise-ready</h3>
+                        <p class="benefit-description">
+                            Built-in guardrails, compliance reporting, and multi-tenant isolation. Win enterprise deals with security-first infrastructure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to transform your GPU fleet?</h2>
+                    <p class="cta-subtitle">
+                        See how GreenThread can help you monetize idle capacity and compete with the hyperscalers.
+                    </p>
+                    <a href="mailto:sales@greenthread.ai" class="btn-primary btn-lg">Talk to Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img
+                                src="../images/logo.png"
+                                alt="GreenThread"
+                                class="footer-logo-img"
+                            />
+                        </div>
+                        <p class="footer-description">
+                            Distributed AI inference at scale. Deploy anywhere,
+                            scale effortlessly.
+                        </p>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Contact</h4>
+                        <a
+                            href="mailto:sales@greenthread.ai"
+                            class="footer-link"
+                            >Contact Sales</a
+                        >
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 GreenThread. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../script.js"></script>
+    </body>
+</html>
