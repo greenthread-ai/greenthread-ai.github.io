@@ -1,0 +1,4 @@
+# GreenThread Landing Site (dev)
+greenthread.localhost {
+	reverse_proxy localhost:5173
+}
