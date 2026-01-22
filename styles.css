@@ -992,13 +992,6 @@ body {
     filter: brightness(0) invert(1);
 }
 
-.footer-logo-text {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--white);
-    letter-spacing: -0.02em;
-}
-
 .footer-description {
     font-size: 0.9375rem;
     line-height: 1.7;
